@@ -6,6 +6,8 @@
         <div class="flex justify-center">
             <h1>Pizza List</h1>
         </div> 
+        <h1>Welcome, {{ $name }} (Age: {{ $age }})</h1>
+
         <h2>Example loop</h2>
         @for($i = 0; $i < 5; $i++)
             <p>The value of i is {{ $i }}</p>

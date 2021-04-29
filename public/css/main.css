@@ -16,6 +16,15 @@ footer {
 	width: 75%;
 }
 
+.order-link {
+	font-size: 40px;
+}
+
+.order-link:hover {
+	text-decoration: underline;
+	color: #C92B14;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 html {

@@ -20,6 +20,9 @@
         <div class="flex justify-center">
             <img class="logo" src="/img/pizza-house.PNG" alt="Pizza house logo" />
         </div>
+        <div class="flex justify-center">
+            <a href="/pizzas/create" class="order-link">Order pizza --></a>
+        </div>
     </div>
 </div>
 @endsection

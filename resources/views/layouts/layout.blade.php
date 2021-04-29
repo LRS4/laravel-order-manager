@@ -12,7 +12,7 @@
         <!-- Styles -->
         <link href="/css/main.css" rel="stylesheet">
     </head>
-    <body class="antialiased">
+    <body>
         @yield('content')
 
         <footer>

@@ -48,7 +48,9 @@
                 value="olives">Olives   
         </fieldset>
 
-        <input type="submit" value="Order pizza" />
+        <button type="submit" class="button-main">
+            Order pizza
+        </button>
     </form>
 </div>
 @endsection

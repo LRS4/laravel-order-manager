@@ -18,7 +18,7 @@
             <form action="/pizzas/{{ $pizza->id }}" method="POST">
                 @csrf
                 @method('DELETE') 
-                <button>Complete order</button>
+                <button class="button-main">Complete order</button>
             </form>
         </div>
         <a href="/pizzas" class="back-link"><-- Back to all</a>

@@ -4,6 +4,7 @@
 <div class="wrapper create-pizza">
     <h1>Order a pizza</h1>
     <form action="/pizzas" method="POST">
+        @csrf
         <label for="name">
             Your name
         </label>

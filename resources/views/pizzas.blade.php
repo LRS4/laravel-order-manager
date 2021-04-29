@@ -26,25 +26,26 @@
                 <div class="flex justify-center">
                     <h1>Pizza List</h1>
                 </div> 
-                <p class="flex justify-center">
-                    {{ $type }} - {{ $base }} - {{ $price }}
-                </p>
-                @if($price > 15)
-                    <p>This pizza is expensive</p>
-                @elseif($price < 5)
-                    <p>This pizza is cheap</p>
-                @else 
-                    <p>This pizza is average price</p>
-                @endif
+                <h2>Example loop</h2>
+                @for($i = 0; $i < 5; $i++)
+                    <p>The value of i is {{ $i }}</p>
+                @endfor
 
-                @unless($base == 'cheese crust')
-                    <p>Does not have cheese crust!</p>
-                @endunless
+                <h2>For loop</h2>
+                @for($i = 0; $i < count($pizzas); $i++)
+                    <p>{{ $pizzas[$i]['type'] }}</p>
+                @endfor
 
-                @php 
-                    $message = "Enjoy your pizza :)";
-                    echo($message);
-                @endphp
+                <h2>Foreach loop</h2>
+                @foreach($pizzas as $pizza)
+                    <p>{{ $loop->index }} - {{ $pizza['type'] }} - {{ $pizza['base'] }}</p>
+                    @if($loop->first)
+                        <span>First iteration</span>
+                    @endif
+                    @if($loop->last)
+                        <span>Last iteration</span>
+                    @endif
+                @endforeach
             </div>
         </div>
     </body>

@@ -20,8 +20,19 @@
         <div class="flex justify-center">
             <img class="logo" src="/img/pizza-house.PNG" alt="Pizza house logo" />
         </div>
+        @if (session('success_message'))
+            <div class="flex justify-center">
+                <p style="font-size: 40px;">{{ session('success_message') }}</p>
+            </div>
+        @endif
         <div class="flex justify-center">
-            <a href="/pizzas/create" class="order-link">Order pizza --></a>
+            <a href="/pizzas/create" class="order-link">
+            @if (session('success_message'))
+                Order another pizza -->
+            @else 
+                Order a pizza -->
+            @endif
+        </a>
         </div>
     </div>
 </div>

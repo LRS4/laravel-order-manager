@@ -6,27 +6,10 @@
         <div class="flex justify-center">
             <h1>Pizza List</h1>
         </div> 
-        <h1>Welcome, {{ $name }} (Age: {{ $age }})</h1>
-
-        <h2>Example loop</h2>
-        @for($i = 0; $i < 5; $i++)
-            <p>The value of i is {{ $i }}</p>
-        @endfor
-
-        <h2>For loop</h2>
-        @for($i = 0; $i < count($pizzas); $i++)
-            <p>{{ $pizzas[$i]['type'] }}</p>
-        @endfor
-
-        <h2>Foreach loop</h2>
         @foreach($pizzas as $pizza)
-            <p>{{ $loop->index }} - {{ $pizza['type'] }} - {{ $pizza['base'] }}</p>
-            @if($loop->first)
-                <span>First iteration</span>
-            @endif
-            @if($loop->last)
-                <span>Last iteration</span>
-            @endif
+            <div>
+                {{ $pizza->name }} - {{ $pizza->type }} - {{ $pizza->base }} - £{{ $pizza->price }}
+            </div>
         @endforeach
     </div>
 </div>

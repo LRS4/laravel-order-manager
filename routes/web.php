@@ -22,7 +22,7 @@ Route::get('/pizzas', function () {
     
     $pizza = [
         'type' => 'hawaiian', 
-        'base' => 'cheese crust',
+        'base' => 'garlic crust',
         'price' => 10
     ];
 

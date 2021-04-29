@@ -29,6 +29,22 @@
                 <p class="flex justify-center">
                     {{ $type }} - {{ $base }} - {{ $price }}
                 </p>
+                @if($price > 15)
+                    <p>This pizza is expensive</p>
+                @elseif($price < 5)
+                    <p>This pizza is cheap</p>
+                @else 
+                    <p>This pizza is average price</p>
+                @endif
+
+                @unless($base == 'cheese crust')
+                    <p>Does not have cheese crust!</p>
+                @endunless
+
+                @php 
+                    $message = "Enjoy your pizza :)";
+                    echo($message);
+                @endphp
             </div>
         </div>
     </body>

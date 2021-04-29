@@ -8,9 +8,15 @@
         </div> 
         <div class="justify-center">
             <p class="type">Type: {{ $pizza->type }}</p>
-            <p class="base">Type: {{ $pizza->base }}</p>
+            <p class="base">Base: {{ $pizza->base }}</p>
+            <p class="toppings">Extra toppings:</p>
+            <ul>
+                @foreach ($pizza->toppings as $topping)
+                    <li>{{ $topping }}</li>
+                @endforeach
+            </ul>
         </div>
-        <a href="/pizzas" class="back"><-- Back to all</a>
+        <a href="/pizzas" class="back-link"><-- Back to all</a>
     </div>
 </div>
 @endsection

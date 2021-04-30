@@ -7,6 +7,11 @@ use App\Models\Pizza;
 
 class PizzaController extends Controller
 {
+    // Use constructor for controller level auth
+    // public function __construct() {
+    //     $this->middleware('auth');
+    // }
+
     public function index() {
         
         $pizzas = Pizza::all();

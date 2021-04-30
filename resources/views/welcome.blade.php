@@ -24,7 +24,7 @@
             </div>
         @endif
         <div class="flex justify-center">
-            <a href="/pizzas/create" class="order-link">
+            <a href="{{ route('pizzas.create') }}" class="order-link">
             @if (session('success_message'))
                 Order another pizza -->
             @else 
